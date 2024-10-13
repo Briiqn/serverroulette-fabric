@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "serverroulette-fabric",
+  "version": "${version}",
+  "name": "serverroulette-fabric",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/serverroulette-fabric/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "dev.briiqn.serverroulette.client.ServerRouletteClient"
+    ],
+    "main": [
+      "dev.briiqn.serverroulette.ServerRoulette"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
