@@ -433,14 +433,11 @@ public class ShodanServerListScreen extends Screen {
             try (Writer writer = new FileWriter(CACHE_FILE_NAME+System.currentTimeMillis()+".json")) {
                 gson.toJson(cachedPages, writer);
                 MinecraftClient.getInstance().execute(() -> {
-                    // Show a success message to the user
-                    // You might want to implement a proper notification system
                     System.out.println("Servers exported successfully!");
                 });
             } catch (IOException e) {
                 e.printStackTrace();
                 MinecraftClient.getInstance().execute(() -> {
-                    // Show an error message to the user
                     System.out.println("Failed to export servers: " + e.getMessage());
                 });
             }
@@ -461,14 +458,12 @@ public class ShodanServerListScreen extends Screen {
                 applyFilters();
 
                 MinecraftClient.getInstance().execute(() -> {
-                    // Show a success message to the user
                     System.out.println("Servers imported successfully!");
                     updateUI();
                 });
             } catch (IOException e) {
                 e.printStackTrace();
                 MinecraftClient.getInstance().execute(() -> {
-                    // Show an error message to the user
                     System.out.println("Failed to import servers: " + e.getMessage());
                 });
             }
