@@ -148,7 +148,6 @@ public class ShodanServerListScreen extends Screen {
                 .dimensions(this.width - 210, 20, 100, 20)
                 .build());
 
-        // Add Import button
         this.addDrawableChild(ButtonWidget.builder(Text.literal("Import Servers"), button -> importServers())
                 .dimensions(this.width - 315, 20, 100, 20)
                 .build());
